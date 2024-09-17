@@ -1,6 +1,5 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
@@ -14,8 +13,18 @@ const Index = () => {
       <Header />
       <Hero />
       <ClientLogos />
-      <Services />
+      <div id="services">
+        <Services />
+      </div>
       <UseCases />
+      <div id="about" className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
+          <p className="text-center mb-8">
+            NahaInc AI is a leading provider of AI solutions in South Africa. We are dedicated to transforming businesses through innovative AI technologies, helping them save time, money, and boost productivity.
+          </p>
+        </div>
+      </div>
       <div id="contact" className="py-16 bg-gray-200">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
