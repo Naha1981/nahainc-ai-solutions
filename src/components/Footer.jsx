@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">NahaInc AI</h3>
-            <p>Empowering South African Businesses through Advanced AI Technologies</p>
+            <p>Empowering Businesses Across All Industries with Advanced AI Technologies</p>
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
-            <p>Phone: [Your Phone Number]</p>
-            <p>Email: [Your Email]</p>
-            <p>Address: [Your Address in Johannesburg]</p>
+            <p>Phone: +27612980377</p>
+            <p>Email: thabiso@nahainc.co.za</p>
+            <p>Address: Vincent Thusi Street, Messipark</p>
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
