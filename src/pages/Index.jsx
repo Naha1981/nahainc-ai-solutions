@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
       <ClientLogos />
@@ -17,7 +17,7 @@ const Index = () => {
         <Services />
       </div>
       <UseCases />
-      <div id="about" className="py-16 bg-white">
+      <div id="about" className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
           <p className="text-center mb-8">
@@ -25,7 +25,7 @@ const Index = () => {
           </p>
         </div>
       </div>
-      <div id="contact" className="py-16 bg-gray-200">
+      <div id="contact" className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
           <p className="text-center mb-8">Ready to transform your business with AI? Get in touch with us today!</p>

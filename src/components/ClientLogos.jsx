@@ -11,16 +11,16 @@ const clients = [
 
 const ClientLogos = () => {
   return (
-    <div className="bg-white py-12">
+    <div className="bg-gray-900 py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Our Clients</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-white">Our Clients</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {clients.map((client, index) => (
             <div key={index} className="flex items-center justify-center">
               {client.logo ? (
                 <img src={client.logo} alt={client.name} className="max-h-16 max-w-full" />
               ) : (
-                <span className="text-lg font-semibold">{client.name}</span>
+                <span className="text-lg font-semibold text-white">{client.name}</span>
               )}
             </div>
           ))}
