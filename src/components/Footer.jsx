@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -19,8 +20,12 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/in/thabiso-naha-4985316b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">LinkedIn</a>
-              <a href="https://x.com/Naha_AI_Agency" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">Twitter</a>
+              <a href="https://www.linkedin.com/in/thabiso-naha-4985316b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="https://x.com/Naha_AI_Agency" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400">
+                <Twitter className="w-6 h-6" />
+              </a>
             </div>
           </div>
         </div>
