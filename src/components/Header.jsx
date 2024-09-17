@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -8,15 +9,17 @@ const Header = () => {
         <div className="text-2xl font-bold">NahaInc AI</div>
         <nav>
           <ul className="flex space-x-6">
-            <li><a href="#" className="hover:text-teal-400">What we do</a></li>
-            <li><a href="#" className="hover:text-teal-400">Industries</a></li>
-            <li><a href="#" className="hover:text-teal-400">Portfolio</a></li>
-            <li><a href="#" className="hover:text-teal-400">Insights</a></li>
-            <li><a href="#" className="hover:text-teal-400">About us</a></li>
-            <li><a href="#" className="hover:text-teal-400">Careers</a></li>
+            <li><Link to="#services" className="hover:text-teal-400">What we do</Link></li>
+            <li><Link to="#industries" className="hover:text-teal-400">Industries</Link></li>
+            <li><Link to="#portfolio" className="hover:text-teal-400">Portfolio</Link></li>
+            <li><Link to="#insights" className="hover:text-teal-400">Insights</Link></li>
+            <li><Link to="#about" className="hover:text-teal-400">About us</Link></li>
+            <li><Link to="#careers" className="hover:text-teal-400">Careers</Link></li>
           </ul>
         </nav>
-        <Button className="bg-teal-500 hover:bg-teal-600 text-white">LET'S TALK</Button>
+        <Button className="bg-teal-500 hover:bg-teal-600 text-white" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+          LET'S TALK
+        </Button>
       </div>
     </header>
   );
