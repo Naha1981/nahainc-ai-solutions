@@ -1,12 +1,44 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const navigate = useNavigate();
 
   const handleContactUs = () => {
     navigate('/contact');
+  };
+
+  const sentence = "Do More for Less - From AI to ROI";
+
+  const container = {
+    hidden: { opacity: 0 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      transition: { staggerChildren: 0.03, delayChildren: 0.04 * i },
+    }),
+  };
+
+  const child = {
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      x: 20,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
   };
 
   return (
@@ -16,7 +48,18 @@ const Hero = () => {
         opacity: 0.2
       }}></div>
       <div className="container mx-auto px-4 relative z-10 text-center">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4">Do More for Less - From AI to ROI</h1>
+        <motion.h1
+          className="text-5xl md:text-6xl font-bold mb-4"
+          variants={container}
+          initial="hidden"
+          animate="visible"
+        >
+          {sentence.split("").map((char, index) => (
+            <motion.span key={char + "-" + index} variants={child}>
+              {char}
+            </motion.span>
+          ))}
+        </motion.h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-300">We help businesses in South Africa implement AI to save costs, save time, and boost efficiency.</p>
         <div className="flex justify-center">
           <Button 
