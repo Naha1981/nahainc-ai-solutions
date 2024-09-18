@@ -17,18 +17,18 @@ const Index = () => {
         <Services />
       </div>
       <UseCases />
-      <div id="about" className="py-16 bg-gray-900">
+      <div id="about" className="py-16 bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
-          <p className="text-center mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">About Us</h2>
+          <p className="text-center mb-8 max-w-2xl mx-auto text-gray-300">
             NahaInc AI is a leading provider of AI solutions in South Africa. We are dedicated to transforming businesses through innovative AI technologies, helping them save time, money, and boost productivity.
           </p>
         </div>
       </div>
       <div id="contact" className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Contact Us</h2>
-          <p className="text-center mb-8 max-w-2xl mx-auto">Ready to transform your business with AI? Get in touch with us today!</p>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Contact Us</h2>
+          <p className="text-center mb-8 max-w-2xl mx-auto text-gray-300">Ready to transform your business with AI? Get in touch with us today!</p>
           <div className="flex justify-center">
             <Button 
               className="bg-teal-500 hover:bg-teal-600 text-white text-lg px-8 py-3"

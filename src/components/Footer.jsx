@@ -9,13 +9,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">NahaInc AI</h3>
-            <p>Empowering Businesses Across All Industries with Advanced AI Technologies</p>
+            <p className="text-gray-300">Empowering Businesses Across All Industries with Advanced AI Technologies</p>
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
-            <p>Phone: +27612980377</p>
-            <p>Email: thabiso@nahainc.co.za</p>
-            <p>Address: Vincent Thusi Street, Messipark</p>
+            <p className="text-gray-300">Phone: +27612980377</p>
+            <p className="text-gray-300">Email: thabiso@nahainc.co.za</p>
+            <p className="text-gray-300">Address: Vincent Thusi Street, Messipark</p>
           </div>
           <div>
             <h4 className="text-xl font-semibold mb-4">Follow Us</h4>
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 text-center">
-          <p>&copy; 2024 NahaInc AI. All rights reserved.</p>
+          <p className="text-gray-400">&copy; 2024 NahaInc AI. All rights reserved.</p>
         </div>
       </div>
     </footer>
