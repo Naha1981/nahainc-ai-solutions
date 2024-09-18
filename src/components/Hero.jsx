@@ -6,6 +6,7 @@ import { motion, useAnimation } from 'framer-motion';
 const Hero = () => {
   const navigate = useNavigate();
   const controls = useAnimation();
+  const backgroundTextControls = useAnimation();
 
   const handleContactUs = () => {
     navigate('/contact');
@@ -47,12 +48,15 @@ const Hero = () => {
       await controls.start("visible");
       await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
       await controls.start("hidden");
+      await backgroundTextControls.start({ opacity: 1, transition: { duration: 0.5 } });
+      await new Promise(resolve => setTimeout(resolve, 1000)); // Show background text for 1 second
+      await backgroundTextControls.start({ opacity: 0, transition: { duration: 0.5 } });
       await new Promise(resolve => setTimeout(resolve, 500)); // Short pause before restarting
       animateText(); // Restart the animation
     };
 
     animateText();
-  }, [controls]);
+  }, [controls, backgroundTextControls]);
 
   return (
     <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 text-white py-20">
@@ -73,6 +77,13 @@ const Hero = () => {
             </motion.span>
           ))}
         </motion.h1>
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold mb-4 text-teal-300"
+          initial={{ opacity: 0 }}
+          animate={backgroundTextControls}
+        >
+          Stay ahead of your competition
+        </motion.h2>
         <p className="text-xl md:text-2xl mb-8 text-gray-300">We help businesses in South Africa implement AI to save costs, save time, and boost efficiency.</p>
         <div className="flex justify-center">
           <Button 
