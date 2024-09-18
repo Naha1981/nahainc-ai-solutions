@@ -12,10 +12,10 @@ const Index = () => {
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
-      <ClientLogos />
       <div id="services">
         <Services />
       </div>
+      <ClientLogos />
       <UseCases />
       <div id="about" className="py-16 bg-gray-800">
         <div className="container mx-auto px-4">
