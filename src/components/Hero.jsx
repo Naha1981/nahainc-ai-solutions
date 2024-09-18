@@ -52,10 +52,13 @@ const Hero = () => {
       await new Promise(resolve => setTimeout(resolve, 1000)); // Show background text for 1 second
       await backgroundTextControls.start({ opacity: 0, transition: { duration: 0.5 } });
       await new Promise(resolve => setTimeout(resolve, 500)); // Short pause before restarting
-      animateText(); // Restart the animation
     };
 
-    animateText();
+    const intervalId = setInterval(animateText, 5000); // Run animation every 5 seconds
+
+    animateText(); // Start the animation immediately
+
+    return () => clearInterval(intervalId); // Clean up on unmount
   }, [controls, backgroundTextControls]);
 
   return (
