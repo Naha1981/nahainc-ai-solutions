@@ -12,11 +12,6 @@ const Index = () => {
     <div className="min-h-screen bg-gray-900 text-white">
       <Header />
       <Hero />
-      <div id="services">
-        <Services />
-      </div>
-      <ClientLogos />
-      <UseCases />
       <div id="about" className="py-16 bg-gray-800">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-white">About Us</h2>
@@ -25,6 +20,11 @@ const Index = () => {
           </p>
         </div>
       </div>
+      <div id="services">
+        <Services />
+      </div>
+      <ClientLogos />
+      <UseCases />
       <div id="contact" className="py-16 bg-gray-900">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8 text-white">Contact Us</h2>
