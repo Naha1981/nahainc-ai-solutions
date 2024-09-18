@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 const Hero = () => {
   const navigate = useNavigate();
+  const controls = useAnimation();
 
   const handleContactUs = () => {
     navigate('/contact');
@@ -41,6 +42,18 @@ const Hero = () => {
     },
   };
 
+  useEffect(() => {
+    const animateText = async () => {
+      await controls.start("visible");
+      await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for 3 seconds
+      await controls.start("hidden");
+      await new Promise(resolve => setTimeout(resolve, 500)); // Short pause before restarting
+      animateText(); // Restart the animation
+    };
+
+    animateText();
+  }, [controls]);
+
   return (
     <div className="relative bg-gradient-to-br from-gray-800 to-gray-900 text-white py-20">
       <div className="absolute inset-0 bg-cover bg-center" style={{
@@ -52,7 +65,7 @@ const Hero = () => {
           className="text-5xl md:text-6xl font-bold mb-4"
           variants={container}
           initial="hidden"
-          animate="visible"
+          animate={controls}
         >
           {sentence.split("").map((char, index) => (
             <motion.span key={char + "-" + index} variants={child}>
